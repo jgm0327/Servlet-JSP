@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class SecondServlet extends HttpServlet{
 
 	@Override
-	public void doGet(HttpServletRequest req, HttpServletResponse res) throws
+	protected void service(HttpServletRequest req, HttpServletResponse res) throws
 	ServletException, IOException{
 		System.out.println("SecondServlet!!");
 		PrintWriter out = res.getWriter();

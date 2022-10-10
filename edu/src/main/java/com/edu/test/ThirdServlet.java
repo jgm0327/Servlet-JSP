@@ -17,7 +17,18 @@ public class ThirdServlet extends HttpServlet{
 	ServletException, IOException{
 		resp.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = resp.getWriter();
-		out.print("<h1>좋은 하루!</h1>");
+		int i = 1;
+		while(i <= 10) {
+			out.print("<br>number : " + i);
+			i++;
+			
+			try {
+				Thread.sleep(100);
+			}catch(InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		out.print("<br>실행완료!");
 		out.close();
 	}
 }
