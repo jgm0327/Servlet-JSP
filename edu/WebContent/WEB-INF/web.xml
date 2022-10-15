@@ -77,6 +77,13 @@
   	<exception-type>java.lang.NullPointerException</exception-type>
   	<location>/errorHandle</location>
   </error-page>
+  
+  <resource-ref>
+  	<description>Oracle DataSoruce example</description>
+  	<res-ref-name>jdbc/myoracle</res-ref-name>
+  	<res-type>javax.sql.DataSource</res-type>
+  	<res-auth>Container</res-auth>
+  </resource-ref>
 
   <servlet>
   	<servlet-name>initParam</servlet-name>
