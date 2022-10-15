@@ -78,6 +78,13 @@
   	<location>/errorHandle</location>
   </error-page>
   
+  <jsp-config>
+  	<taglib>
+  		<taglib-uri>http://myTags.com</taglib-uri>
+  		<taglib-location>/WEB-INF/myTag.tld</taglib-location>
+  	</taglib>
+  </jsp-config>
+  
   <resource-ref>
   	<description>Oracle DataSoruce example</description>
   	<res-ref-name>jdbc/myoracle</res-ref-name>
