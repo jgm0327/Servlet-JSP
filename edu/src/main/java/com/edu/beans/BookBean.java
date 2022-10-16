@@ -24,5 +24,16 @@ public class BookBean {
 		this.publisher = publisher;
 	}
 	
+	public BookBean() {
+		
+	}
+	
+	public BookBean(String title, String author, String publisher) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+	}
+	
 	
 }
