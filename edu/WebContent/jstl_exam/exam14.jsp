@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <%@ page import="java.io.*, java.util.*, java.sql.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
@@ -9,6 +7,18 @@ driver="oracle.jdbc.driver.OracleDriver"
 url="jdbc:oracle:thin:@localhost:1521:xe"
 user="scott"
 password="tiger"/>
+
+<sql:transaction dataSource="${myoracle2 }">
+	<sql:update>
+		update dept set loc='LOS ANGELES' where deptno=10
+	</sql:update>
+	<sql:update>
+		update dept set loc='HOUSTON' where deptno=20
+	</sql:update>
+	<sql:update>
+		insert into dept values(50, 'MARKETING', 'SEATTLE')
+	</sql:update>
+</sql:transaction>
 
 <sql:query dataSource="${myoracle2 }" var="result">
 	select * from dept
