@@ -8,6 +8,7 @@
 	<tag>
 		<name>first</name>
 		<tag-class>com.edu.customTag.MyCustomTag</tag-class>
+		<tei-class>com.edu.customTag.MyCustomTEI</tei-class>
 		<body-content>JSP</body-content>
 		<attribute>
 			<name>color</name>
